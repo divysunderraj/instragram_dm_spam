@@ -8,8 +8,8 @@ prompt = input('Are you already logged into Instagram?\nYes or No.')
 if prompt == 'Yes':
     print('hang on')
 if prompt == 'No':
-    username = input('Enter your instagram username')
-    password = input('Enter your instagram password')
+    username = input('Enter your instagram username: ')
+    password = input('Enter your instagram password: ')
     message = input('Enter the message you would like to spam: ')
     user = input('Enter the instagram username you plan on messaging: ')
     repetition = int(input('Enter the number of times you want to send the message: '))
