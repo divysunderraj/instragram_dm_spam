@@ -2,7 +2,11 @@ import pyautogui
 import webbrowser
 import time
 
-#update this so that it can be used for a user already logged in
+'''
+update this so that it can be used for a user already logged in
+works for fullscreen google chrome tab
+'''
+
 prompt = input('Are you already logged into Instagram?\nYes or No.')
 
 if prompt == 'Yes':
@@ -17,7 +21,6 @@ if prompt == 'No':
 
 
     def login():
-        # logs into Instagram from google chrome specifically
         x = 830
         y = 318
         time.sleep(1)
