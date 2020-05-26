@@ -1,5 +1,5 @@
 # instragram_dm_spam
-Spam a message to a fellow instagram user
+Spam a direct message to a fellow instagram user
 
 Note: 1.0 Requires using google chrome as your default browser as well as it opened full screen as it utilizes pyautogui.
 
