@@ -3,7 +3,7 @@ import webbrowser
 import time
 
 '''
-Note: This only works on a fullscreen google chrome tab
+Note: This only works on a full screen google chrome tab
 '''
 
 
