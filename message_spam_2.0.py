@@ -50,7 +50,6 @@ def spam(spam_message, repetitions):
     print('done\n')
 
 
-
 instagram_username = input('Enter your instagram username: ')
 instagram_password = getpass.getpass(prompt='Enter your instagram password: ', stream=None)
 instagram_receiver = input('Enter the instagram username you plan on messaging: ')
