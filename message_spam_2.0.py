@@ -4,8 +4,7 @@ import time
 import getpass
 
 
-def spam(instagram_username, instagram_password, instagram_receiver, spam_message, repetitions):
-    browser = webdriver.Chrome('/Users/divysunderraj/Downloads/chromedriver')
+def login(instagram_username, instagram_password):
     browser.get('https://www.instagram.com/')
     time.sleep(1)
     username = browser.find_element_by_name('username')
@@ -15,6 +14,8 @@ def spam(instagram_username, instagram_password, instagram_receiver, spam_messag
     password.send_keys(instagram_password)
     password.send_keys(Keys.ENTER)
 
+
+def setup(instagram_receiver):
     time.sleep(3)
     not_now = browser.find_element_by_xpath('/html/body/div[4]/div/div/div[3]/button[2]')
     not_now.click()
@@ -35,6 +36,10 @@ def spam(instagram_username, instagram_password, instagram_receiver, spam_messag
     next_button = browser.find_element_by_xpath('/html/body/div[4]/div/div[1]/div/div[2]/div/button')
     next_button.click()
     time.sleep(1)
+
+
+def spam(spam_message, repetitions):
+    time.sleep(1)
     message_box = browser.find_element_by_xpath(
         '/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')
 
@@ -45,9 +50,13 @@ def spam(instagram_username, instagram_password, instagram_receiver, spam_messag
     print('done\n')
 
 
+
 instagram_username = input('Enter your instagram username: ')
 instagram_password = getpass.getpass(prompt='Enter your instagram password: ', stream=None)
 instagram_receiver = input('Enter the instagram username you plan on messaging: ')
 spam_message = input('Enter the message you would like to spam: ')
 repetition = int(input('Enter the number of times you want to send the message: '))
-spam(instagram_username, instagram_password,instagram_receiver, spam_message, repetition)
+browser = webdriver.Chrome('/Users/divysunderraj/Downloads/chromedriver')
+login(instagram_username, instagram_password)
+setup(instagram_receiver)
+spam(spam_message, repetitions=repetition)
